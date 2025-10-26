@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  apk-signer:
+    build: .
+    container_name: apk-signing-service
+    ports:
+      - "3000:3000"    # HTTP (default/fallback)
+      - "80:80"        # HTTP (for SSL/ACME challenges)
+      - "443:443"      # HTTPS
+    volumes:
+      # Mount keystore (read-only)
+      - ./keys:/app/keys:ro
+      # Named volume for uploads
+      - uploads:/app/uploads
+      # Named volume for SSL certificates
+      - certs:/app/certs
+    env_file:
+      - .env
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://localhost:3000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
+
+volumes:
+  uploads:
+    driver: local
+  certs:
+    driver: local
