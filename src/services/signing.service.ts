@@ -1,11 +1,11 @@
 import fs from 'fs-extra';
 import path from 'path';
 import { v4 as uuidv4 } from 'uuid';
-import { config } from '../config';
-import { safeRemove } from '../utils/file.utils';
-import { logger } from '../utils/logger';
-import { execCommand } from '../utils/process.utils';
-import { sanitizeFilename } from '../utils/validation';
+import { config } from '../config.js';
+import { safeRemove } from '../utils/file.utils.js';
+import { logger } from '../utils/logger.js';
+import { execCommand } from '../utils/process.utils.js';
+import { sanitizeFilename } from '../utils/validation.js';
 
 export class SigningService {
   private readonly signedDir: string;

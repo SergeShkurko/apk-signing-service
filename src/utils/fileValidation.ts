@@ -1,7 +1,7 @@
 import AdmZip from 'adm-zip';
 import { fileTypeFromFile } from 'file-type';
 import fs from 'fs-extra';
-import { logger } from './logger';
+import { logger } from './logger.js';
 
 /**
  * Validates APK file

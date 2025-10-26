@@ -4,19 +4,19 @@ import express from 'express';
 import helmet from 'helmet';
 import type { Server } from 'http';
 import path from 'path';
-import { config } from './config';
-import { errorHandler } from './middleware/errorHandler';
-import { apiLimiter, speedLimiter } from './middleware/rateLimiter';
-import healthRoutes from './routes/health.routes';
-import signRoutes from './routes/sign.routes';
-import { cleanupService } from './services/cleanup.service';
-import { enforceFileLimit } from './utils/fileLimit';
-import { logger } from './utils/logger';
-import { closeServers } from './utils/server.utils';
+import { config } from './config.js';
+import { errorHandler } from './middleware/errorHandler.js';
+import { apiLimiter, speedLimiter } from './middleware/rateLimiter.js';
+import healthRoutes from './routes/health.routes.js';
+import signRoutes from './routes/sign.routes.js';
+import { cleanupService } from './services/cleanup.service.js';
+import { enforceFileLimit } from './utils/fileLimit.js';
+import { logger } from './utils/logger.js';
+import { closeServers } from './utils/server.utils.js';
 import {
   createHttpsServerDev,
   createHttpsServerProduction
-} from './utils/ssl';
+} from './utils/ssl.js';
 
 dotenv.config();
 

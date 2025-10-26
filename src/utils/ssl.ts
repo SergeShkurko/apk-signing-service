@@ -2,9 +2,9 @@ import type { Application } from 'express';
 import fs from 'fs-extra';
 import https from 'https';
 import path from 'path';
-import { config } from '../config';
-import { logger } from './logger';
-import { execCommand } from './process.utils';
+import { config } from '../config.js';
+import { logger } from './logger.js';
+import { execCommand } from './process.utils.js';
 
 /**
  * Creates self-signed certificate for development mode

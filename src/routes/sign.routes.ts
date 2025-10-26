@@ -1,17 +1,17 @@
 import express from 'express';
 import fs from 'fs-extra';
 import path from 'path';
-import { config } from '../config';
-import { authMiddleware } from '../middleware/auth';
-import { downloadLimiter, signLimiter } from '../middleware/rateLimiter';
-import { signingService } from '../services/signing.service';
-import { upload } from '../services/upload.service';
-import type { SignResponse } from '../types';
-import { safeRemove } from '../utils/file.utils';
-import { enforceFileLimit } from '../utils/fileLimit';
-import { validateApkFile } from '../utils/fileValidation';
-import { logger } from '../utils/logger';
-import { safeFilePath } from '../utils/validation';
+import { config } from '../config.js';
+import { authMiddleware } from '../middleware/auth.js';
+import { downloadLimiter, signLimiter } from '../middleware/rateLimiter.js';
+import { signingService } from '../services/signing.service.js';
+import { upload } from '../services/upload.service.js';
+import type { SignResponse } from '../types/index.js';
+import { safeRemove } from '../utils/file.utils.js';
+import { enforceFileLimit } from '../utils/fileLimit.js';
+import { validateApkFile } from '../utils/fileValidation.js';
+import { logger } from '../utils/logger.js';
+import { safeFilePath } from '../utils/validation.js';
 
 const router = express.Router();
 

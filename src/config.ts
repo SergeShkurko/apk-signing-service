@@ -1,11 +1,11 @@
 import dotenv from 'dotenv';
-import type { Config } from './types';
+import type { Config } from './types/index.js';
 import {
   generateSecureToken,
   validateAuthToken,
   validateKeystoreEnv,
   warnProductionSecurity
-} from './utils/configValidation';
+} from './utils/configValidation.js';
 
 dotenv.config();
 

@@ -1,6 +1,6 @@
 import type { NextFunction, Request, Response } from 'express';
-import { config } from '../config';
-import { logger } from '../utils/logger';
+import { config } from '../config.js';
+import { logger } from '../utils/logger.js';
 
 export const authMiddleware = (req: Request, res: Response, next: NextFunction) => {
   const authHeader = req.headers.authorization;

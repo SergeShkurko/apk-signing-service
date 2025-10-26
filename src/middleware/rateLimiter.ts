@@ -1,5 +1,5 @@
 import slowDown from 'express-slow-down';
-import { createRateLimiter } from '../factories/limiter.factory';
+import { createRateLimiter } from '../factories/limiter.factory.js';
 
 /**
  * General limit for all API endpoints

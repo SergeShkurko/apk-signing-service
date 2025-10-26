@@ -1,8 +1,8 @@
 import cron from 'node-cron';
 import path from 'path';
-import { config } from '../config';
-import { getFilesByAge, safeRemove } from '../utils/file.utils';
-import { logger } from '../utils/logger';
+import { config } from '../config.js';
+import { getFilesByAge, safeRemove } from '../utils/file.utils.js';
+import { logger } from '../utils/logger.js';
 
 export class CleanupService {
   private readonly directories: string[];

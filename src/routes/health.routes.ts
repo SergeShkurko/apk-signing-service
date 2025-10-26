@@ -1,6 +1,6 @@
 import type { Request, Response } from 'express';
 import express from 'express';
-import type { HealthResponse } from '../types';
+import type { HealthResponse } from '../types/index.js';
 
 const router = express.Router();
 

@@ -1,0 +1,26 @@
+{
+  "jsc": {
+    "parser": {
+      "syntax": "typescript",
+      "topLevelAwait": true,
+      "decorators": true,
+      "dynamicImport": true
+    },
+    "target": "esnext",
+    "experimental": {
+      "plugins": [
+        ["@swc/plugin-transform-imports", {
+          "^(.*?)(\\.ts)$": {
+            "skipDefaultConversion": true,
+            "transform": "{{matches.[1]}}.js"
+          }
+        }]
+      ]
+    }
+  },
+  "module": {
+    "type": "nodenext",
+        "resolveFully": true,
+    "outFileExtension": "js"
+  }
+}

@@ -1,4 +1,4 @@
-import { isDevelopment } from "../config";
+import { isDevelopment } from "../config.js";
 
 /**
  * Sanitizes paths in logs

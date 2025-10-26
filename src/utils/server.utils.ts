@@ -1,5 +1,5 @@
 import type { Server } from 'http';
-import { logger } from './logger';
+import { logger } from './logger.js';
 
 /**
  * Close single server with Promise

@@ -1,8 +1,8 @@
 import multer from 'multer';
 import path from 'path';
 import { v4 as uuidv4 } from 'uuid';
-import { config } from '../config';
-import { ensureDirectories } from '../utils/file.utils';
+import { config } from '../config.js';
+import { ensureDirectories } from '../utils/file.utils.js';
 
 const incomingDir = path.join(config.upload.dir, 'incoming');
 const signedDir = path.join(config.upload.dir, 'signed');

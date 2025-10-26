@@ -102,8 +102,6 @@ FILE_RETENTION_HOURS=24
 MAX_FILES_PER_DIRECTORY=10
 ```
 
-> 📖 **For detailed SSL/HTTPS setup instructions, see [docs/SSL_SETUP.md](docs/SSL_SETUP.md)**
-
 
 ## Installation Instructions
 
@@ -118,7 +116,12 @@ cp .env.example .env
 Direct run option
 ```sh
 npm install
+npm run build
 npm run start
+# or
+bun install
+bun run build
+bun start
 ```
 
 Docker run option
